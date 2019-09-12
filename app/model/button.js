@@ -5,7 +5,8 @@ module.exports = app => {
             type:INTEGER,
             primaryKey:true
         },
-        name:STRING
+        name:STRING,
+        event:STRING
     },{
         freezeTableName: true,
         timestamps: false ,
