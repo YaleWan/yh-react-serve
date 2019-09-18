@@ -1,5 +1,5 @@
 module.exports = app =>{
-    const {INTEGER,STRING} = app.Sequelize;
+    const {INTEGER,STRING,TEXT} = app.Sequelize;
     const Menu = app.model.define(
         'menu',{
             id:{
@@ -8,7 +8,10 @@ module.exports = app =>{
             },
             title:STRING,
             key:STRING,
-            pid:INTEGER
+            pid:INTEGER,
+            type:STRING,
+            remark:TEXT
+
         },{
             freezeTableName: true,
             timestamps: false ,

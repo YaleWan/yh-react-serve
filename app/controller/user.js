@@ -7,10 +7,7 @@ class UserController extends Controller {
   async addUser() {
     const { ctx } = this;
     const [userInfo, type,id] = ctx.request.body;
-    console.log('id :', id);
-    console.log('type :', type);
     if (type == 1) {
-      console.log('1111 :', 1111);
       const data = await ctx.service.user.editUser(userInfo,id)
       if (data) {
         ctx.body = {
@@ -24,7 +21,6 @@ class UserController extends Controller {
         };
       }
     } else {
-      console.log('2222 :', 2222);
       const data = await ctx.service.user.addUser(userInfo);
       if (data) {
         ctx.body = {

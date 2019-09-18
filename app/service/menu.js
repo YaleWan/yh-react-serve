@@ -34,6 +34,25 @@ class MenuService extends Service {
     }
     return rootNeeds
   }
+
+  async addMenu(menuInfo) {    
+    const { dataValues } = await this.ctx.model.Menu.create(menuInfo);
+    return dataValues;
+  }
+  async editMenu(menuInfo, id) {
+    return await this.ctx.model.Menu.update(menuInfo, {
+      where: {
+        id: id
+      }
+    });
+  }
+  async delMenu(id) {
+    return await this.ctx.model.Menu.destroy({
+      where: {
+        id
+      }
+    });
+  }
 }
 
 module.exports = MenuService;

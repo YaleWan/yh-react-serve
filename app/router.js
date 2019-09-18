@@ -10,5 +10,7 @@ module.exports = app => {
   router.post('/addUser',controller.user.addUser)
   router.post('/findUser',controller.user.findUser)
   router.post('/delUser',controller.user.delUser)
+  router.post('/handleMenu',controller.menu.handleMenu)
+  router.post('/delMenu',controller.menu.delMenu)
 
 };
