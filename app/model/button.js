@@ -6,7 +6,9 @@ module.exports = app => {
             primaryKey:true
         },
         name:STRING,
-        event:STRING
+        event:STRING,
+        icon:STRING,
+        pid:STRING
     },{
         freezeTableName: true,
         timestamps: false ,

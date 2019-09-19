@@ -11,6 +11,24 @@ class ButtonService extends Service {
     })
     return buttons
   }
+  async addButton(buttonInfo) {
+    const { dataValues } = await this.ctx.model.Button.create(buttonInfo);
+    return dataValues;
+  }
+  async editButton(buttonInfo, id) {
+    return await this.ctx.model.Button.update(buttonInfo, {
+      where: {
+        id: id
+      }
+    });
+  }
+  async delButton(id) {
+    return await this.ctx.model.Button.destroy({
+      where: {
+        id
+      }
+    });
+  }
 }
 
 module.exports = ButtonService;

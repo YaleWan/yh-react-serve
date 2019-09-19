@@ -4,7 +4,7 @@ const Controller = require("egg").Controller;
 
 class UserController extends Controller {
   // 新增用户接口
-  async addUser() {
+  async handleUser() {
     const { ctx } = this;
     const [userInfo, type,id] = ctx.request.body;
     if (type == 1) {

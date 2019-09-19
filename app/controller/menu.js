@@ -42,9 +42,7 @@ class MenuController extends Controller {
   async delMenu() {
     const { ctx } = this;
     const { id } = ctx.request.body;
-    console.log('id :', id);
     const data = await ctx.service.menu.delMenu(id);
-    console.log('data ================:', data);
     if (data) {
       ctx.body = {
         code: 200,
