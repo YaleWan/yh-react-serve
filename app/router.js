@@ -14,5 +14,8 @@ module.exports = app => {
   router.post('/delMenu',controller.menu.delMenu)
   router.post('/handleButton',controller.button.handleButton)
   router.post('/delButton',controller.button.delButton)
+  router.post('/handleRole',controller.role.handleRole)
+  router.post('/findRole',controller.role.findRole)
+  router.post('/delRole',controller.role.delRole)
 
 };
